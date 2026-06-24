@@ -1,0 +1,13 @@
+@use 'components/mixins' as *
+
+body 
+    margin: 0
+    box-sizing: border-box
+
+.grid
+    display: grid
+
+.col_3 
+    grid-template-columns: 1fr
+    +media(1024)
+        grid-template-columns: repeat(3, 1fr)

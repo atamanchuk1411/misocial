@@ -1,0 +1,96 @@
+-
+    let navigationMenu = [
+        ["Home", "index.html"],
+        ["Why MISOCIAL", "#"],
+        ["Features", "#"],
+        ["Articles", "#"],
+        ["Pricing", "#"],
+    ]
+
+mixin menu(navigationMenu, colorTheme="light")
+    .navigation.flex_between.items_center
+        .logo 
+            a(href="index.html")
+                picture 
+                    img(src="assets/images/logo.svg" alt="logo.misocial")
+                span(class=colorTheme) misocial 
+            nav.flex_nav 
+                ul.flex_between.items_center(class=colorTheme)
+                    for item in navigationMenu 
+                        li 
+                            a(href=item[1])  #{item[0]} 
+                p(class=colorTheme).cta_empty
+                    a(href="#" class="btn") get started
+
+-
+    let cardsInfo = {
+        satelite: {
+            img: "assets/images/cosmo.png",
+            alt: "satelite",
+            personal: "personal",
+            currency: "$",
+            price: 0,
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btnText: "select plan",
+            href: "#",
+        },
+        machine: {
+            img: "assets/images/machine.png",
+            alt: "machine",
+            personal: "personal",
+            currency: "$",
+            price: 29,
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btnText: "select plan",
+            href: "#",
+        },
+        rocket: {
+            img: "assets/images/rocket.png",
+            alt: "rocket",
+            personal: "personal",
+            currency: "$",
+            price: 49,
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btnText: "select plan",
+            href: "#",
+        },
+    }
+
+mixin card(oneCard)
+    figure.card 
+        figcaption 
+            picture 
+                img(src=oneCard.img, alt=oneCard.alt)
+            p.personal #{oneCard.personal}
+            p.price 
+                span.currency #{oneCard.currency}
+                b #{oneCard.price}
+                if oneCard.isMonth 
+                    | /month
+                else 
+                    | /year
+            ul.description 
+                for item in oneCard.description 
+                    li #{item}
+            a(href=oneCard.href) #{oneCard.btnText}
