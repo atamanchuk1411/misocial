@@ -4,25 +4,29 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="assets/styles/style.sass")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
         title Document
     body 
         include components/mixins 
         header 
             +menu(navigationMenu)
-            p SOCIAL MARKETING & ANALYTICS
-            h1 Pricing Table
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+            div.main.container.wrapper.flex_between
+                p.light SOCIAL MARKETING & ANALYTICS
+                h1.light Pricing Table
+                p.light Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
         main 
             section 
                 h2 Select a Plan 
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
                 .grid.col_3
-                    +card(cardsInfo.satelite)
+                    +card(cardsInfo.satelite, "active")
                     +card(cardsInfo.machine)
                     +card(cardsInfo.rocket)
-            section 
-                p SOCAL MARKETING & ANALYTICS
-                h2 Take control of your data
+            section.map.flex_between.items_center
+                p.light SOCAL MARKETING & ANALYTICS
+                h2.light Take control of your data
         footer 
             +menu(navigationMenu, "dark")
         script(type="module" src="/main.js")

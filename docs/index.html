@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <script type="module" crossorigin src="./assets/js/main.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/js/app.js">
@@ -11,23 +13,25 @@
   <body> 
     <header> 
           <div class="navigation flex_between items_center">
-            <div class="logo"> <a href="index.html">
-                <picture> <img src="./assets/images/logo.svg" alt="logo.misocial"></picture><span class="light">misocial </span></a>
-              <nav class="flex_nav"> 
+            <div class="logo flex_between items_center"><a class="flex items_center" href="index.html">
+                <picture> <img src="./assets/images/logo.svg" alt="logo.misocial"></picture><span class="light">misocial  </span></a>
+              <nav class="flex_nav flex">
                 <ul class="flex_between items_center light">
-                  <li> <a href="index.html"> Home </a></li>
-                  <li> <a href="#"> Why MISOCIAL </a></li>
-                  <li> <a href="#"> Features </a></li>
-                  <li> <a href="#"> Articles </a></li>
-                  <li> <a href="#"> Pricing </a></li>
+                  <li> <a class="menu" href="index.html"> Home </a></li>
+                  <li> <a class="menu" href="#"> Why MISOCIAL </a></li>
+                  <li> <a class="menu" href="#"> Features </a></li>
+                  <li> <a class="menu" href="#"> Articles </a></li>
+                  <li> <a class="menu" href="#"> Pricing </a></li>
                 </ul>
                 <p class="light cta_empty"><a class="btn" href="#">get started</a></p>
               </nav>
             </div>
           </div>
-      <p>SOCIAL MARKETING & ANALYTICS</p>
-      <h1>Pricing Table</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+      <div class="main container wrapper flex_between">
+        <p class="light">SOCIAL MARKETING & ANALYTICS</p>
+        <h1 class="light">Pricing Table</h1>
+        <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+      </div>
     </header>
     <main> 
       <section> 
@@ -36,67 +40,67 @@
         <div class="grid col_3">
               <figure class="card"> 
                 <figcaption> 
-                  <picture> <img src="./assets/images/cosmo.png" alt="satelite"></picture>
-                  <p class="personal">personal</p>
-                  <p class="price"> <span class="currency">$</span><b>0</b>/month
+                  <picture class="flex_center"> <img src="./assets/images/cosmo.png" alt="satelite"></picture>
+                  <p class="personal text_center">personal</p>
+                  <p class="price text_center"><span class="currency">$</span><b>0</b>/month
                   </p>
-                  <ul class="description"> 
+                  <ul class="description text_center">
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>sed do eiusmod tempor incididunt ut.</li>
                     <li>Labore et dolore magna aliqua.</li>
                     <li>quis nostrud exercitation ullamco laboris.</li>
                     <li>Ea commodo consequat.</li>
-                  </ul><a href="#">select plan</a>
+                  </ul><a class="button flex_center" href="#">select plan</a>
                 </figcaption>
               </figure>
               <figure class="card"> 
                 <figcaption> 
-                  <picture> <img src="./assets/images/machine.png" alt="machine"></picture>
-                  <p class="personal">personal</p>
-                  <p class="price"> <span class="currency">$</span><b>29</b>/month
+                  <picture class="flex_center"> <img src="./assets/images/machine.png" alt="machine"></picture>
+                  <p class="personal text_center">personal</p>
+                  <p class="price text_center"><span class="currency">$</span><b>29</b>/month
                   </p>
-                  <ul class="description"> 
+                  <ul class="description text_center">
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>sed do eiusmod tempor incididunt ut.</li>
                     <li>Labore et dolore magna aliqua.</li>
                     <li>quis nostrud exercitation ullamco laboris.</li>
                     <li>Ea commodo consequat.</li>
-                  </ul><a href="#">select plan</a>
+                  </ul><a class="button flex_center" href="#">select plan</a>
                 </figcaption>
               </figure>
               <figure class="card"> 
                 <figcaption> 
-                  <picture> <img src="./assets/images/rocket.png" alt="rocket"></picture>
-                  <p class="personal">personal</p>
-                  <p class="price"> <span class="currency">$</span><b>49</b>/month
+                  <picture class="flex_center"> <img src="./assets/images/rocket.png" alt="rocket"></picture>
+                  <p class="personal text_center">personal</p>
+                  <p class="price text_center"><span class="currency">$</span><b>49</b>/month
                   </p>
-                  <ul class="description"> 
+                  <ul class="description text_center">
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>sed do eiusmod tempor incididunt ut.</li>
                     <li>Labore et dolore magna aliqua.</li>
                     <li>quis nostrud exercitation ullamco laboris.</li>
                     <li>Ea commodo consequat.</li>
-                  </ul><a href="#">select plan</a>
+                  </ul><a class="button flex_center" href="#">select plan</a>
                 </figcaption>
               </figure>
         </div>
       </section>
-      <section> 
-        <p>SOCAL MARKETING & ANALYTICS</p>
-        <h2>Take control of your data</h2>
+      <section class="map flex_between items_center">
+        <p class="light">SOCAL MARKETING & ANALYTICS</p>
+        <h2 class="light">Take control of your data</h2>
       </section>
     </main>
     <footer> 
           <div class="navigation flex_between items_center">
-            <div class="logo"> <a href="index.html">
-                <picture> <img src="./assets/images/logo.svg" alt="logo.misocial"></picture><span class="dark">misocial </span></a>
-              <nav class="flex_nav"> 
+            <div class="logo flex_between items_center"><a class="flex items_center" href="index.html">
+                <picture> <img src="./assets/images/logo.svg" alt="logo.misocial"></picture><span class="dark">misocial  </span></a>
+              <nav class="flex_nav flex">
                 <ul class="flex_between items_center dark">
-                  <li> <a href="index.html"> Home </a></li>
-                  <li> <a href="#"> Why MISOCIAL </a></li>
-                  <li> <a href="#"> Features </a></li>
-                  <li> <a href="#"> Articles </a></li>
-                  <li> <a href="#"> Pricing </a></li>
+                  <li> <a class="menu" href="index.html"> Home </a></li>
+                  <li> <a class="menu" href="#"> Why MISOCIAL </a></li>
+                  <li> <a class="menu" href="#"> Features </a></li>
+                  <li> <a class="menu" href="#"> Articles </a></li>
+                  <li> <a class="menu" href="#"> Pricing </a></li>
                 </ul>
                 <p class="dark cta_empty"><a class="btn" href="#">get started</a></p>
               </nav>

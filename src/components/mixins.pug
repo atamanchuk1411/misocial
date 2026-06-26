@@ -9,16 +9,16 @@
 
 mixin menu(navigationMenu, colorTheme="light")
     .navigation.flex_between.items_center
-        .logo 
-            a(href="index.html")
+        .logo.flex_between.items_center
+            a(href="index.html").flex.items_center
                 picture 
                     img(src="assets/images/logo.svg" alt="logo.misocial")
-                span(class=colorTheme) misocial 
-            nav.flex_nav 
+                span(class=colorTheme) misocial  
+            nav.flex_nav.flex
                 ul.flex_between.items_center(class=colorTheme)
                     for item in navigationMenu 
                         li 
-                            a(href=item[1])  #{item[0]} 
+                            a.menu(href=item[1])  #{item[0]} 
                 p(class=colorTheme).cta_empty
                     a(href="#" class="btn") get started
 
@@ -80,17 +80,17 @@ mixin menu(navigationMenu, colorTheme="light")
 mixin card(oneCard)
     figure.card 
         figcaption 
-            picture 
+            picture.flex_center 
                 img(src=oneCard.img, alt=oneCard.alt)
-            p.personal #{oneCard.personal}
-            p.price 
+            p.personal.text_center #{oneCard.personal}
+            p.price.text_center
                 span.currency #{oneCard.currency}
                 b #{oneCard.price}
                 if oneCard.isMonth 
                     | /month
                 else 
                     | /year
-            ul.description 
+            ul.description.text_center
                 for item in oneCard.description 
                     li #{item}
-            a(href=oneCard.href) #{oneCard.btnText}
+            a.button.flex_center(href=oneCard.href) #{oneCard.btnText}

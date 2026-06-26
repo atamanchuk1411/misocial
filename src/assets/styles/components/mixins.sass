@@ -1,3 +1,6 @@
 =media($size)
     @media screen and (min-width: #{$size}px)
         @content
+
+=gradient($url)
+    background: linear-gradient(-60deg, #87d3cd88 30%, #6c45e181 80%), #6d45e1 url(#{$url}) no-repeat center/cover
