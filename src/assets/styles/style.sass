@@ -10,7 +10,21 @@ body
     font-family: "Maven Pro"
 
 header
+    padding-bottom: 200px
     +gradient('../assets/images/glasses.jpg')
+
+h1
+    font-size: 86px
+    letter-spacing: -3px
+    font-weight: 500
+
+h2
+    font-weight: 500
+
+figcaption
+    display: flex
+    flex-direction: column
+    align-items: center
 
 a
     text-decoration: none
@@ -21,41 +35,109 @@ ul
 picture
     padding: 50px 0
 
+main h2
+    font-size: 60px
+    letter-spacing: -2px
+    line-height: 1.2em
+    color: #4f4f6f
+
+svg
+    fill: #6a6a77
+    transition: .5s
+    &:hover
+        fill: #6e45e2
+
+footer
+    .navigation
+        padding-bottom: 25px
+    nav.wrapper
+        padding-top: 25px
+        border-top: 1px solid #bdbdc2 
+
+.wrapper
+    margin: 0 auto 
+    width: 95%
+    +media(1920)
+        max-width: 1820px
+
 .logo
     max-height: 75px
     span
         font-size: 30px
-        font-weight: 400
+        font-weight: bold
         text-transform: uppercase
+        letter-spacing: 6px
 
 .menu
-    font-size: 16px;
-    line-height: 1.2em;
-    font-weight: 400;
+    padding-bottom: 2px
+    font-size: 16px
+    line-height: 1.2em
+    font-weight: 400
 
 .light
     color: #fff
     a
         color: #fff
+        transition: .5s
+        &:hover
+            border-bottom: 1px solid #fff
+    .btn
+        +btn($fixed: false, $empty: false)
 
 .dark
     color: #121212
     a
         color: #121212
+        transition: .5s
+        &:hover
+            border-bottom: 1px solid #121212
+    .btn
+        +btn($fixed: false, $empty: true)
 
-.cta_empty 
-    min-width: 90px
+.arrowDown
+    &:hover
+        .circle
+            top: 515px
+            left: 630px
+        .arrow
+            top: 540px
+            left: 655px
 
-.btn 
-    font-size: 12px;
-    letter-spacing: 1px;
-    line-height: 2.6em;
-    text-transform: uppercase;
+.circle
+    position: absolute
+    top: 500px
+    left: 630px
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    background-color: #fff
+    transition: .5s
+        
+.arrow
+    position: absolute
+    top: 525px
+    left: 655px
+    transition: .5s
 
 .main.container
     padding: 100px 0
     text-align: center
     flex-direction: column
+    align-items: center
+
+.column
+    text-align: center
+    flex-direction: column
+    align-items: center
+    padding-top: 80px
+    +media(1040)
+        padding-top: 120px
+
+.w40
+    width: 40%
+
+.background
+    background-color: #f9fafc
 
 .flex
     display: flex
@@ -65,7 +147,6 @@ picture
     display: flex
     justify-content: space-between
     gap: 20px
-    width: 100%
 
 .items_center
     align-items: center
@@ -77,14 +158,75 @@ picture
 .text_center
     text-align: center
 
+.miso
+    position: relative
+
+.linew
+    position: absolute
+    width: 24px
+    height: 1px
+    background-color: #fff
+
+.lineg
+    position: absolute
+    width: 24px
+    height: 1px
+    background-color: #6e45e2
+
+.start
+    top: 16px
+    left: -40px
+
+.end
+    top: 16px
+    right: -40px
+
+.w33
+    width: 33%
+
+.small
+    font-size: 16px
+    line-height: 1.75em
+    a
+        font-size: 16px
+        line-height: 1.75em
+
+.grey
+    color: #9fa4af
+    a
+        color: #9fa4af
+    
+.marketing
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 2.29em
+    font-weight: bold
+
 .grid
     display: grid
 
 .col_3 
-    padding: 100px 250px 120px
+    padding: 70px 0 80px
     grid-template-columns: 1fr
+    margin: 0 auto
+    width: 60%
+    gap: 50px
+    +media(700)
+        padding: 100px 0 120px
     +media(1024)
+        width: 80%
+        gap: 50px
         grid-template-columns: repeat(3, 1fr)
+        justify-content: space-between
+
+.card
+    padding-bottom: 66px
+    border-radius: 30px
+    background-color: #ffffff
+    border: 1px solid #d7dbe8
+    transition: .5s
+    &:hover
+        box-shadow: 0 0 46px rgba(204,204,223,0.71)
 
 .personal
     padding-bottom: 28px
@@ -92,13 +234,44 @@ picture
 .price
     padding-bottom: 48px
 
-.description 
-    padding-bottom: 55px
+.s60
+    font-size: 60px
 
-.button 
-    padding-bottom: 66px
+.description 
+    padding: 0 10px 55px
+
+.btn_fixed
+    +btn()
 
 .map
     +gradient('../assets/images/map.jpg')
     flex-direction: column
     padding: 180px 0
+    h2
+        font-size: 60px
+        letter-spacing: -2px
+        line-height: 1.2em
+
+.buttons
+    display: flex
+    flex-direction: column
+    gap: 20px
+    +media(700)
+        flex-direction: row
+        gap: 10px
+
+.get
+    +btn($fixed: false, $empty: true)
+    width: 190px
+
+.exp
+    +btn($fixed: true, $empty: false)
+
+.pad
+    padding-top: 8px
+
+.gap10
+    gap: 10px
+
+.fb
+    padding-right: 5px

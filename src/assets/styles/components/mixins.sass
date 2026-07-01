@@ -4,3 +4,38 @@
 
 =gradient($url)
     background: linear-gradient(-60deg, #87d3cd88 30%, #6c45e181 80%), #6d45e1 url(#{$url}) no-repeat center/cover
+
+=btn($fixed: true, $empty: false)
+    display: inline-block
+    padding: 19px 0
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #c2c9db
+    font-weight: 400
+    text-align: center
+    border-radius: 30px 
+    transition: .5s   
+    @if $fixed
+        width: 190px
+        box-shadow: 0 0 5px 5px rgba(204,204,223,0.5)
+        background-color: #ffffff
+        border: 1px solid #d7dbe8
+        &:hover
+            border-color: transparent 
+            color: #fff
+            background-color: #6e45e2
+    @else 
+        width: 150px
+        color: #fff
+        background-color: transparent 
+        border: 1px solid #ffffff
+        &:hover
+            box-shadow: 0 0 5px 5px rgba(204,204,223,0.5)
+    @if $empty != false
+        background-color: #6e45e2
+        &:hover
+            color: #6e45e2 
+            background: transparent 
+            border: 1px solid #6e45e2
+            box-shadow: 0 0 5px 5px rgba(204,204,223,0.5)

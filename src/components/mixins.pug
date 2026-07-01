@@ -8,19 +8,19 @@
     ]
 
 mixin menu(navigationMenu, colorTheme="light")
-    .navigation.flex_between.items_center
+    .navigation.flex_between.items_center.wrapper
         .logo.flex_between.items_center
             a(href="index.html").flex.items_center
                 picture 
                     img(src="assets/images/logo.svg" alt="logo.misocial")
                 span(class=colorTheme) misocial  
-            nav.flex_nav.flex
-                ul.flex_between.items_center(class=colorTheme)
-                    for item in navigationMenu 
-                        li 
-                            a.menu(href=item[1])  #{item[0]} 
-                p(class=colorTheme).cta_empty
-                    a(href="#" class="btn") get started
+        nav.flex_nav.flex
+            ul.flex_between.items_center(class=colorTheme)
+                for item in navigationMenu 
+                    li 
+                        a.menu(href=item[1])  #{item[0]} 
+            p.cta_empty(class=colorTheme)
+                a(href="#" class="btn") get started
 
 -
     let cardsInfo = {
@@ -78,19 +78,19 @@ mixin menu(navigationMenu, colorTheme="light")
     }
 
 mixin card(oneCard)
-    figure.card 
-        figcaption 
+    figure.card
+        figcaption
             picture.flex_center 
                 img(src=oneCard.img, alt=oneCard.alt)
-            p.personal.text_center #{oneCard.personal}
+            p.personal.text_center.grey.marketing #{oneCard.personal}
             p.price.text_center
                 span.currency #{oneCard.currency}
-                b #{oneCard.price}
+                b.s60 #{oneCard.price}
                 if oneCard.isMonth 
                     | /month
                 else 
                     | /year
             ul.description.text_center
                 for item in oneCard.description 
-                    li #{item}
-            a.button.flex_center(href=oneCard.href) #{oneCard.btnText}
+                    li.smal.grey #{item}
+            a.button.btn_fixed(href=oneCard.href) #{oneCard.btnText}
