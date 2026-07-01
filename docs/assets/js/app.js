@@ -1,1 +1,1 @@
-
+open_popup.onclick=c=>{c.preventDefault(),black.classList.add("di-block"),popup.classList.add("di-block"),console.log("+")};cancel_popup.onclick=c=>{c.preventDefault(),black.classList.remove("di-block"),popup.classList.remove("di-block")};black.onclick=c=>{c.preventDefault(),black.classList.remove("di-block"),popup.classList.remove("di-block")};

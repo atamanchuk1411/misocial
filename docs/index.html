@@ -11,19 +11,22 @@
     <link rel="stylesheet" crossorigin href="./assets/styles.css">
   </head>
   <body> 
+    <div class="black" id="black"></div>
     <header> 
           <div class="navigation flex_between items_center wrapper">
             <div class="logo flex_between items_center"><a class="flex items_center" href="index.html">
                 <picture> <img src="./assets/images/logo.svg" alt="logo.misocial"></picture><span class="light">misocial  </span></a></div>
             <nav class="flex_nav flex">
-              <ul class="flex_between items_center light">
+              <ul class="popup flex_between items_center d-block light" id="popup">
                 <li> <a class="menu" href="index.html"> Home </a></li>
                 <li> <a class="menu" href="#"> Why MISOCIAL </a></li>
                 <li> <a class="menu" href="#"> Features </a></li>
                 <li> <a class="menu" href="#"> Articles </a></li>
                 <li> <a class="menu" href="#"> Pricing </a></li>
+                <p class="cancel_popup" id="cancel_popup">x</p>
               </ul>
               <p class="cta_empty light"><a class="btn" href="#">get started</a></p>
+              <div class="open_popup" id="open_popup"><span class="burger"></span><span class="burger"></span><span class="burger"></span></div>
             </nav>
           </div><a class="miso arrowDown" href="#"> <span class="circle"> </span><img class="arrow" src="data:image/svg+xml,%3csvg%20version='1.2'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2014%2016'%20width='14'%20height='16'%3e%3cdefs%3e%3cimage%20width='14'%20height='16'%20id='img1'%20href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQBAMAAADUulMJAAAAAXNSR0IB2cksfwAAACRQTFRFn6Svn6Svn6Svn6Svn6Svn6Svn6Svn6Svn6Svn6Svn6Svn6SvV4m42QAAAAx0Uk5TAP8QBhzZW3/9AZdrKDSe9gAAAFdJREFUeJxjZGBgEOR/wMBIKs38F0QbMLpKLxDkf+bHWChaJcjvsZ5xVp3HRtFoDUbOGU+7lyeVMTLMqvvJMCOckYFzRgFnWQFQ/6zyGeEgczgXPitgAADNRBzlF/ED+gAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3cstyle%3e%3c/style%3e%3cuse%20href='%23img1'%20x='0'%20y='0'/%3e%3c/svg%3e" alt=""></a>
       <div class="main container wrapper flex_between">
@@ -98,14 +101,16 @@
             <div class="logo flex_between items_center"><a class="flex items_center" href="index.html">
                 <picture> <img src="./assets/images/logo.svg" alt="logo.misocial"></picture><span class="dark">misocial  </span></a></div>
             <nav class="flex_nav flex">
-              <ul class="flex_between items_center dark">
+              <ul class="popup flex_between items_center d-block dark" id="popup">
                 <li> <a class="menu" href="index.html"> Home </a></li>
                 <li> <a class="menu" href="#"> Why MISOCIAL </a></li>
                 <li> <a class="menu" href="#"> Features </a></li>
                 <li> <a class="menu" href="#"> Articles </a></li>
                 <li> <a class="menu" href="#"> Pricing </a></li>
+                <p class="cancel_popup" id="cancel_popup">x</p>
               </ul>
               <p class="cta_empty dark"><a class="btn" href="#">get started</a></p>
+              <div class="open_popup" id="open_popup"><span class="burger"></span><span class="burger"></span><span class="burger"></span></div>
             </nav>
           </div>
       <nav class="wrapper flex_between"><a class="pad" href="#">© 2017 Mass Impressions & Tranmautritam. Make the right impression.</a>
