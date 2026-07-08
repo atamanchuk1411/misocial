@@ -1,27 +1,27 @@
 doctype html
-html(lang="en")
+html(lang="uk")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.1, maximum-scale=2.0, minimum-scale=1.0")
         link(rel="stylesheet" href="assets/styles/style.sass")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
-        title Document
+        title Misocial
     body 
         include components/mixins 
         div#black.black
         header 
             +menu(navigationMenu)
-            a.miso.arrowDown(href="#") 
-                span.circle 
-                img.arrow(src="assets/images/arrowDown.svg", alt="")
             div.main.container.wrapper.flex_between
                 p.light.marketing.miso SOCIAL MARKETING & ANALYTICS
                     span.start.linew 
                     span.end.linew
                 h1.light.big Pricing Table
                 p.light.w33.small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+                a.arrowDown(href="#") 
+                    span.circle 
+                    img.arrow(src="assets/images/arrowDown.svg", alt="")
         main 
             section.background
                 div.column.flex_between
@@ -41,7 +41,7 @@ html(lang="en")
                     a.get(href="#") get started
                     a.exp(href="#") explore features
         footer 
-            +menu(navigationMenu, "dark")
+            +menu(navigationMenu, "dark", "black_menu")
             nav.wrapper.flex_between
                 a.pad(href="#") © 2017 Mass Impressions & Tranmautritam. Make the right impression.
                 ul.flex_between.gap10

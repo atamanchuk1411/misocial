@@ -7,14 +7,14 @@
         ["Pricing", "#"],
     ]
 
-mixin menu(navigationMenu, colorTheme="light")
+mixin menu(navigationMenu, colorTheme="light", colorBurger="white_menu")
     .navigation.flex_between.items_center.wrapper
         .logo.flex_between.items_center
             a(href="index.html").flex.items_center
                 picture 
                     img(src="assets/images/logo.svg" alt="logo.misocial")
                 span(class=colorTheme) misocial  
-        nav.flex_nav.flex
+        nav.flex_nav.flex.full_menu
             ul#popup.popup.flex_between.items_center.d-block(class=colorTheme)
                 for item in navigationMenu 
                     li 
@@ -22,7 +22,7 @@ mixin menu(navigationMenu, colorTheme="light")
                 p#cancel_popup.cancel_popup x
             p.cta_empty(class=colorTheme)
                 a(href="#" class="btn") get started
-            div#open_popup.open_popup
+            div#open_popup.open_popup(class=colorBurger)
                 span.burger
                 span.burger
                 span.burger

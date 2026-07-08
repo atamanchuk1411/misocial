@@ -67,12 +67,6 @@ footer
         font-weight: bold
         text-transform: uppercase
         letter-spacing: 6px
-    
-.menu
-    padding-bottom: 2px
-    font-size: 16px
-    line-height: 1.2em
-    font-weight: 400
 
 .light
     color: #fff
@@ -86,37 +80,51 @@ footer
 
 .dark
     color: #121212
+    +media-max(900)
+        color: #fff
     a
         color: #121212
         transition: .5s
+        +media-max(900)
+            color: #fff
         &:hover
             border-bottom: 1px solid #121212
+            +media-max(900)
+                border-bottom: 1px solid #fff
     .btn
         +btn($fixed: false, $empty: true)
 
+span.dark 
+    +media-max(900)
+            color: #121212
+
 .arrowDown
+    position: relative
+    display: flex
+    justify-content: center
     &:hover
         .circle
-            top: 515px
-            left: 630px
+            top: 160px
         .arrow
-            top: 540px
-            left: 655px
+            top: 185px
 
 .circle
     position: absolute
-    top: 500px
-    left: 630px
+    top: 150px
+    right: 0
+    transform: translateX(50%)
     width: 64px
     height: 64px
     border-radius: 50%
     background-color: #fff
     transition: .5s
+    
         
 .arrow
     position: absolute
-    top: 525px
-    left: 655px
+    top: 175px
+    right: 0
+    transform: translateX(50%)
     transition: .5s
 
 .main.container
@@ -158,14 +166,14 @@ footer
 .text_center
     text-align: center
 
-.miso
-    position: relative
-
 .linew
+    display: none
     position: absolute
     width: 24px
     height: 1px
     background-color: #fff
+    +media(360)
+        display: inline
 
 .lineg
     position: absolute
@@ -232,7 +240,13 @@ footer
     padding-bottom: 28px
 
 .price
+    position: relative
     padding-bottom: 48px
+
+.currency
+    position: absolute
+    top: 0
+    left: -10px
 
 .s60
     font-size: 60px
@@ -251,6 +265,7 @@ footer
         font-size: 60px
         letter-spacing: -2px
         line-height: 1.2em
+        text-align: center
 
 .buttons
     display: flex
@@ -276,8 +291,43 @@ footer
 .fb
     padding-right: 5px
 
+.white_menu
+    .burger
+        background-color: #fff
+
+.black_menu
+    .burger
+        background-color: #121212
+
+.navigation
+    display: flex
+    flex-direction: column
+    +media(520)
+        flex-direction: row
+
 .popup
-    position: relative
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2
+    +media(900)
+        position: static
+    +media-max(900)
+        height: 100%
+        background-color: #0e0e70
+        padding: 10px 10px 0 0
+    li
+        padding: 20px 25px
+        +media(900)
+            padding: 0
+
+.menu
+    font-size: 30px
+    +media(900)
+        padding-bottom: 2px
+        font-size: 16px
+        line-height: 1.2em
+        font-weight: 400
 
 .open_popup
     display: flex
@@ -295,7 +345,6 @@ footer
 .burger
     width: 50px
     height: 5px
-    background-color: #fff
 
 .black
     display: none
@@ -306,12 +355,14 @@ footer
     height: 100%
     background: rgba(0, 0, 0, 0.5)
     backdrop-filter: blur(4px)
-    z-index: 2
+    z-index: 1
 
-.cancel
-    position: absolute
+.cancel_popup
+    display: none
+    position: fixed
     top: 10px
-    right: 10px
+    right: 30px
+    font-size: 50px
 
 .di-block
     display: block
