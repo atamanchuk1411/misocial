@@ -4,6 +4,9 @@
     margin: 0
     padding: 0
 
+html
+    scrool-behavior: smooth
+
 body 
     margin: 0
     box-sizing: border-box
@@ -14,11 +17,13 @@ header
     +gradient('../assets/images/glasses.jpg')
 
 h1
+    padding: 35px 0 22px
     font-size: 86px
     letter-spacing: -3px
     font-weight: 500
 
 h2
+    width: 90%
     font-weight: 500
 
 figcaption
@@ -48,6 +53,7 @@ svg
         fill: #6e45e2
 
 footer
+    padding-top: 25px
     .navigation
         padding-bottom: 25px
     nav.wrapper
@@ -72,9 +78,6 @@ footer
     color: #fff
     a
         color: #fff
-        transition: .5s
-        &:hover
-            border-bottom: 1px solid #fff
     .btn
         +btn($fixed: false, $empty: false)
 
@@ -87,10 +90,10 @@ footer
         transition: .5s
         +media-max(900)
             color: #fff
-        &:hover
-            border-bottom: 1px solid #121212
-            +media-max(900)
-                border-bottom: 1px solid #fff
+        &::before
+            background: #fff
+            +media(900)
+                background: #121212
     .btn
         +btn($fixed: false, $empty: true)
 
@@ -143,9 +146,13 @@ span.dark
 
 .w40
     width: 40%
+    +media-max(780)
+        width: 90%
 
 .background
     background-color: #f9fafc
+    h2
+        padding: 10px 0 35px 
 
 .flex
     display: flex
@@ -191,6 +198,8 @@ span.dark
 
 .w33
     width: 33%
+    +media-max(900)
+        width: 90%
 
 .small
     font-size: 16px
@@ -204,6 +213,9 @@ span.dark
     a
         color: #9fa4af
     
+.miso
+    position: relative
+
 .marketing
     font-size: 14px
     letter-spacing: 1px
@@ -217,24 +229,28 @@ span.dark
     padding: 70px 0 80px
     grid-template-columns: 1fr
     margin: 0 auto
-    width: 60%
+    width: 80%
     gap: 50px
     +media(700)
         padding: 100px 0 120px
     +media(1024)
-        width: 80%
+        width: 90%
         gap: 50px
         grid-template-columns: repeat(3, 1fr)
         justify-content: space-between
+    +media(1350)
+        width: 80%
 
 .card
-    padding-bottom: 66px
+    padding: 50px 15px 66px
     border-radius: 30px
     background-color: #ffffff
     border: 1px solid #d7dbe8
     transition: .5s
     &:hover
         box-shadow: 0 0 46px rgba(204,204,223,0.71)
+    picture
+        padding-bottom: 50px
 
 .personal
     padding-bottom: 28px
@@ -242,6 +258,7 @@ span.dark
 .price
     position: relative
     padding-bottom: 48px
+    color: #4f4f6f
 
 .currency
     position: absolute
@@ -252,7 +269,7 @@ span.dark
     font-size: 60px
 
 .description 
-    padding: 0 10px 55px
+    padding-bottom: 55px
 
 .btn_fixed
     +btn()
@@ -262,6 +279,7 @@ span.dark
     flex-direction: column
     padding: 180px 0
     h2
+        padding: 15px 0 18px
         font-size: 60px
         letter-spacing: -2px
         line-height: 1.2em
@@ -278,6 +296,7 @@ span.dark
 .get
     +btn($fixed: false, $empty: true)
     width: 190px
+    border-color: #6e45e2
 
 .exp
     +btn($fixed: true, $empty: false)
@@ -322,7 +341,22 @@ span.dark
             padding: 0
 
 .menu
+    position: relative
     font-size: 30px
+    &::before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        display: block
+        width: 100%
+        height: 2px
+        background: #fff
+        transform: scale(0)
+        transition: .5s
+    &:hover
+        &::before
+            transform: scale(1)
     +media(900)
         padding-bottom: 2px
         font-size: 16px
@@ -361,8 +395,16 @@ span.dark
     display: none
     position: fixed
     top: 10px
-    right: 30px
-    font-size: 50px
+    left: 200px
+    width: 45px
+    height: 45px
 
 .di-block
     display: block
+
+.mass
+    font-size: 14px
+    line-height: 1.4em
+    color: #6a6a77
+    &:hover
+        color: #6e45e2

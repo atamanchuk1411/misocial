@@ -20,6 +20,7 @@ nav.forEach(navItem => {
         e.preventDefault()
         black.classList.remove('di-block')
         popup.classList.remove('di-block')
+        cancel_popup.classList.remove('di-block')
     }
 
     cancel_popup.addEventListener("click", closeBurger)
