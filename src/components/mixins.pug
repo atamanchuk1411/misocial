@@ -19,7 +19,7 @@ mixin menu(navigationMenu, colorTheme="light", colorBurger="white_menu")
                 for item in navigationMenu 
                     li 
                         a.menu(href=item[1])  #{item[0]} 
-                img#cancel_popup.cancel_popup(src="../images/remove.svg", alt="Закрити")
+                img#cancel_popup.cancel_popup(src="../assets/images/remove.svg", alt="Закрити")
             p.cta_empty(class=colorTheme)
                 a(href="#" class="btn") get started
             div#open_popup.open_popup(class=colorBurger)
